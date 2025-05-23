@@ -136,7 +136,7 @@ python3 main.py
 ## Agendamento do Bot (CRON no Linux)
 Se desejar que a extração de dados seja executada automaticamente em horários programados, é possível utilizar o CRON, um agendador nativo do Linux. Para isso, siga os passos abaixo:
 
-### 1. Verifique o script de execução (script.sh)
+### 1. Verifique o script de execução [script.sh](https://github.com/matheu-spereira/bot-ibge/blob/main/script.sh)
 
 Configure o script conforme o ambiente local para:
 
