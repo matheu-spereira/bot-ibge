@@ -12,7 +12,7 @@ Os dados são extraídos da API pública do IBGE (SIDRA), processados e armazena
 - 🔄 **Transformação dos dados JSON em DataFrame estruturado e limpo**.
 - 🏗️ **Armazenamento dos dados em formato Parquet**, com particionamento por data de extração.
 - 🗒️ **Geração de relatório de qualidade dos dados**, incluindo:
-  - Quantidade de valores unicos por coluna
+  - Quantidade de valores únicos por coluna
   - Quantidade de valores nulos por coluna
   - Porcentagem de valores ausentes
   - Tipagem das colunas
@@ -28,24 +28,37 @@ Os dados são extraídos da API pública do IBGE (SIDRA), processados e armazena
   2. Transformação
   3. Relatório de qualidade
   4. Salvamento dos dados e logs
+- 🤖 **Interação com os dados usando Inteligência Artificial**. Exemplo:
+  1. Permite realizar consultas e análises sobre o dataset utilizando linguagem natural, sem necessidade de código SQL ou comandos técnicos.
+  2. Capaz de responder perguntas como: “Qual é o menor valor da coluna DataLiberacao?” ou "Quantas linhas o dataframe possui?"
+- 🕒 **Execução agendada**, conforme [etapa](https://github.com/matheu-spereira/bot-ibge?tab=readme-ov-file#agendamento-do-bot-cron-no-linux):
+  1. Execução agendada por meio do CRON
+
 
 ---
 
 ##  Estrutura do Projeto
 ```bash
-├── app/
-│   ├── ipca_bot.py 
-│   └── main.py 
-├── data/
-│   ├── ipca/ 
-│   │   ├── DataExtracao=YYYYMMDDHHMMSS/ 
-│   │   │   └── {arquivo}.parquet
-│   │   └── resport_data_quality_ipca.csv
-│   └── logs_execucao/ 
-│       └── {YYYYMMDD_HHMMSS}.parquet
-├── README.md 
-├── requirements.txt
-├── solucao.txt
+
+└──bot-ibge
+   ├──app/
+   │  ├── .env
+   │  ├── ipca_bot.py 
+   │  ├── main.py 
+   │  └── chat_bot.py
+   ├── data/
+   │   ├── ipca/ 
+   │   │   ├── DataExtracao=YYYYMMDDHHMMSS/ 
+   │   │   │   └── {arquivo}.parquet
+   │   │   └── resport_data_quality_ipca.csv
+   │   └── logs_execucao/ 
+   │       └── {YYYYMMDD_HHMMSS}.parquet
+   ├── .gitignore
+   ├── README.md 
+   ├── requirements.txt
+   ├── script.sh
+   └── solucao.txt
+
 ```
 
 
@@ -55,10 +68,10 @@ Os dados são extraídos da API pública do IBGE (SIDRA), processados e armazena
 - python3.{versão}-dev
 - build-essential
 
-Por exemplo: Rodar apt-get update && apt-get install python3.{versão}-dev build-essential
+Por exemplo, rodar: apt-get update && apt-get install python3.{versão}-dev build-essential
 
 
-##  Bibliotecas necessárias
+##  Bibliotecas necessárias (Presente no requirements)
 
 - pyarrow 15.0.2
 - requests 2.31.0
@@ -90,7 +103,7 @@ source venv/bin/activate
 pip install -r requirements.txt 
 ```
 
-### 4. Execute o arquivo:
+### 4. Execute o script:
 
 ```bash
 python3 main.py
@@ -148,3 +161,13 @@ Exemplo: executar o bot todos os dias às 14h30:
 ```bash
 30 14 * * * /home/matheus/bot-ibge/script.sh
 ```
+
+## Interação com o dataset utilizando linguagem natural (Experimental)
+
+### 1. Execute o script Python:
+```bash
+python3 chat_bot.py
+```
+
+### 2. Informe o caminho absoluto do arquivo Parquet que deseja analisar e, em seguida, faça perguntas em linguagem natural sobre os dados. Exemplo:
+![alt text](./assets/ibge.gif)
