@@ -1,0 +1,7 @@
+coluna,tipo,qtd_nulos,pct_nulos,qtd_unicos,mean,min,max,duplicatas
+Id,int64,0,0.0,545,36074.54495412844,6957.0,93607.0,0
+Codigo,int64,0,0.0,545,200219.14128440368,197912.0,202504.0,0
+Nome,object,0,0.0,545,,,,0
+Disponivel,bool,0,0.0,1,,,,0
+DataLiberacao,datetime64[ns],0,0.0,201,,,,0
+DataExtracao,object,0,0.0,1,,,,0

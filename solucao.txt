@@ -1,0 +1,24 @@
+Solução para Captura de Dados com Navegação em Site (Sem Link Direto)
+Em cenários onde os dados não estão disponíveis por meio de um link direto ou API, e sua obtenção depende da navegação interativa no site — como acessar menus, preencher logins, clicar em botões ou links — é necessário aplicar uma automação que simule o comportamento de um usuário na interface web.
+
+- Solução Proposta
+Para resolver esse tipo de problema, a abordagem escolhida seria utilizar uma ferramenta de automação de navegadores, como o Selenium, que permite interagir programaticamente com páginas web. Com o Selenium, é possível abrir um navegador, navegar pelo site, realizar logins, interagir com menus, aplicar filtros e até baixar arquivos — exatamente como seria feito manualmente por um usuário.
+
+- Funcionamento da Solução
+1 - O Selenium inicia uma sessão no navegador (preferencialmente o Chrome ou Firefox), que pode rodar em modo visível ou em segundo plano .
+2 - O bot acessa o endereço do site.
+3 - Caso o site exija autenticação, o bot localiza os campos de login e senha, insere as credenciais e realiza o login.
+4 - Após o login, o bot aguarda alguns segundos (ex.: 6 segundos) para garantir que todos os elementos da página sejam carregados corretamente.
+5 - O bot navega pelos menus, aplica filtros, escolhe datas, categorias ou parâmetros conforme a necessidade.
+6 - Se o site disponibiliza um botão de download, o bot clica nesse botão e salva o arquivo. Caso os dados estejam exibidos em uma tabela HTML, o bot extrai o conteúdo diretamente e converte em um DataFrame utilizando Pandas.
+7 - Após a captura, os dados são tratados e padronizados, podendo ser salvos em formatos como Parquet, CSV ou enviados para um banco de dados.
+8 - Ao finalizar o processo, o bot encerra a sessão, fechando o navegador.
+
+- Pontos de Atenção
+Manutenção: Mudanças no layout, nos elementos da página ou na estrutura do site exigirão ajustes no código.
+Autenticação: Alguns sites possuem autenticação em duas etapas (2FA) ou captchas, que podem demandar soluções adicionais (como APIs de captcha ou intervenções manuais no primeiro acesso).
+Aspectos Legais e Éticos: É fundamental verificar os termos de uso do site e garantir que a automação não viole regras, políticas ou legislações aplicáveis.
+Restrições Técnicas: Alguns sites possuem proteções anti-bots, como detecção de comportamento automatizado, limite de requisições ou bloqueios baseados em IP.
+
+Conclusão
+Essa estratégia permite acessar e extrair dados que estão disponíveis apenas mediante interação manual na interface web. Assim, supera a limitação da ausência de APIs ou links diretos, oferecendo uma solução eficiente, automatizada e escalável para alimentar pipelines de dados, análises e relatórios.
