@@ -28,11 +28,11 @@ Os dados são extraídos da API pública do IBGE (SIDRA), processados e armazena
   2. Transformação
   3. Relatório de qualidade
   4. Salvamento dos dados e logs
-- 🤖 **Interação com os dados usando Inteligência Artificial**. Exemplo:
-  1. Permite realizar consultas e análises sobre o dataset utilizando linguagem natural, sem necessidade de código SQL ou comandos técnicos.
-  2. Capaz de responder perguntas como: “Qual é o menor valor da coluna DataLiberacao?” ou "Quantas linhas o dataframe possui?"
+- 🤖 **Interação com os dados usando Inteligência Artificial**. [Exemplo](https://github.com/matheu-spereira/bot-ibge?tab=readme-ov-file#intera%C3%A7%C3%A3o-com-o-dataset-utilizando-linguagem-natural-experimental):
+  - Permite realizar consultas e análises sobre o dataset utilizando linguagem natural, sem necessidade de código SQL ou comandos técnicos.
+  - Capaz de responder perguntas como: “Qual é o menor valor da coluna DataLiberacao?” ou "Quantas linhas o dataframe possui?"
 - 🕒 **Execução agendada**, conforme [etapa](https://github.com/matheu-spereira/bot-ibge?tab=readme-ov-file#agendamento-do-bot-cron-no-linux):
-  1. Execução agendada por meio do CRON
+  - Execução agendada por meio do CRON
 
 
 ---
