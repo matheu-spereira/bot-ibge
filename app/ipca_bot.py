@@ -11,7 +11,7 @@ fuso_brasilia = pytz.timezone('America/Sao_Paulo')
 
 class IPCABot:
     """
-    Robô para capturar dados do IPCA do IBGE, salvar como Parquet e gerar logs da execução.
+    Bot para capturar dados do IPCA do IBGE, salvar como Parquet e gerar logs da execução.
     """
 
     def __init__(self, url: str, caminho_logs: str = "./logs/logs_execucao.parquet"):
@@ -77,7 +77,8 @@ class IPCABot:
 
     def transformar_em_dataframe(self, dados_json: dict) -> pd.DataFrame:
         """
-        Transforma os dados JSON capturados em um DataFrame pandas estruturado.
+        Transforma os dados JSON de período capturados em um DataFrame pandas estruturado.
+        Adiciona uma coluna chamada DataExtracao com o horário da obtenção dos dados.
 
         Args:
             dados_json (dict): Dados no formato JSON obtidos da API.
