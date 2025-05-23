@@ -42,22 +42,22 @@ Os dados são extraídos da API pública do IBGE (SIDRA), processados e armazena
 
 └──bot-ibge
    ├──app/
-   │  ├── .env
-   │  ├── ipca_bot.py 
-   │  ├── main.py 
-   │  └── chat_bot.py
-   ├── data/
-   │   ├── ipca/ 
-   │   │   ├── DataExtracao=YYYYMMDDHHMMSS/ 
-   │   │   │   └── {arquivo}.parquet
-   │   │   └── resport_data_quality_ipca.csv
-   │   └── logs_execucao/ 
-   │       └── {YYYYMMDD_HHMMSS}.parquet
-   ├── .gitignore
-   ├── README.md 
-   ├── requirements.txt
-   ├── script.sh
-   └── solucao.txt
+   │  ├──.env
+   │  ├──ipca_bot.py 
+   │  ├──main.py 
+   │  └──chat_bot.py
+   ├──data/
+   │  ├──ipca/ 
+   │  │   ├──DataExtracao=YYYYMMDDHHMMSS/ 
+   │  │   │   └──{arquivo}.parquet
+   │  │   └──resport_data_quality_ipca.csv
+   │  └── logs_execucao/ 
+   │      └──{YYYYMMDD_HHMMSS}.parquet
+   ├──.gitignore
+   ├──README.md 
+   ├──requirements.txt
+   ├──script.sh
+   └──solucao.txt
 
 ```
 
