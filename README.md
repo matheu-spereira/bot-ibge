@@ -161,15 +161,3 @@ Exemplo: executar o bot todos os dias às 14h30:
 ```bash
 30 14 * * * /home/matheus/bot-ibge/script.sh
 ```
-
-## Interação com o dataset utilizando linguagem natural (Experimental)
-
-Requer chave API Groq. Possível obter de forma gratuita em: https://console.groq.com/keys. Após obter, inserir no arquivo [.env](./app/.env)
-
-### 1. Execute o script Python:
-```bash
-python3 chat_bot.py
-```
-
-### 2. Informe o caminho absoluto do arquivo Parquet que deseja analisar e, em seguida, faça perguntas em linguagem natural sobre os dados. Exemplo:
-![alt text](./assets/ibge.gif)
