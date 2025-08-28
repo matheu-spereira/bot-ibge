@@ -63,7 +63,7 @@ Os dados são extraídos da API pública do IBGE (SIDRA), processados e armazena
 
 
 ---
-##  Pré - Requisitos Ambiente Linux
+## **IMPORTANTE** Pré - Requisitos Ambiente Linux
 - Python >= 3.10
 - python3.{versão}-dev
 - build-essential
@@ -106,7 +106,7 @@ pip install -r requirements.txt
 ### 4. Execute o script:
 
 ```bash
-python3 main.py
+cd app && python3 main.py
 ```
 
 ## Estrutura de Saída
@@ -163,6 +163,8 @@ Exemplo: executar o bot todos os dias às 14h30:
 ```
 
 ## Interação com o dataset utilizando linguagem natural (Experimental)
+
+Requer chave API Groq. Possível obter de forma gratuita em: https://console.groq.com/keys. Após obter, inserir no arquivo [.env](./app/.env)
 
 ### 1. Execute o script Python:
 ```bash
