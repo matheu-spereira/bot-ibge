@@ -72,7 +72,7 @@ Por exemplo, rodar: apt-get update && apt-get install python3.{versão}-dev buil
 
 - pyarrow 15.0.2
 - requests 2.31.0
-- pandasai==2.3.0
+- pandas==2.3.0
 ---
 
 ## Como Executar Localmente
