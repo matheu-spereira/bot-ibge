@@ -1,10 +1,13 @@
 #!/bin/bash
 
-# Ativa o ambiente virtual
-source /home/matheus/bot-ibge/venv/bin/activate
+# Caminho base do projeto
+BASE_DIR="$(dirname "$(realpath "$0")")"
 
-# Vai até o diretório do projeto
-cd /home/matheus/bot-ibge/app
+# Ativa o ambiente virtual dentro do projeto
+source "$BASE_DIR/venv/bin/activate"
+
+# Vai até o diretório do app
+cd "$BASE_DIR/app" || exit
 
 # Executa o script Python
 python3 main.py
