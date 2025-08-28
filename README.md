@@ -41,8 +41,7 @@ Os dados são extraídos da API pública do IBGE (SIDRA), processados e armazena
    ├──app/
    │  ├──.env
    │  ├──ipca_bot.py 
-   │  ├──main.py 
-   │  └──chat_bot.py
+   │  ├──main.py
    ├──data/
    │  ├──ipca/ 
    │  │   ├──DataExtracao=YYYYMMDDHHMMSS/ 
