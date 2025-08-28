@@ -46,7 +46,7 @@ Os dados são extraídos da API pública do IBGE (SIDRA), processados e armazena
    │  ├──ipca/ 
    │  │   ├──DataExtracao=YYYYMMDDHHMMSS/ 
    │  │   │   └──{arquivo}.parquet
-   │  │   └──resport_data_quality_ipca.csv
+   │  │   └──report_data_quality_ipca.csv
    │  └── logs_execucao/ 
    │      └──{YYYYMMDD_HHMMSS}.parquet
    ├──.gitignore
